@@ -1,0 +1,17 @@
+# .air.toml
+
+# Root directory of your project
+root = "."
+
+# Paths to watch for changes
+tmp_dir = "tmp" # Temporary files directory
+
+[build]
+cmd = "go build -o ./tmp/main cmd/server/main.go" # Command to build your project
+bin = "./tmp/main" # Path to the built binary
+include_ext = ["go"] # File extensions to watch for
+exclude_dir = ["tmp", "vendor"] # Directories to exclude from watching
+
+[log]
+time_format = "2006-01-02 15:04:05"
+time_zone = "Local"
